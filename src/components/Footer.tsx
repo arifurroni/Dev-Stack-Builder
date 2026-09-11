@@ -16,17 +16,27 @@ const Footer = () => {
                     </div>
                     <div className=''>
                         <h2 className='font-bold'>PRODUCT</h2>
-                        <ul>
-                            <li><a href="#github">GitHub</a></li>
-                            <li><a href="#twitter">Twitter</a></li>
-                            <li><a href="#linkedin">LinkedIn</a></li>
-                        </ul>
-                        
-                        
-                        
+                        <ul className='my-5 flex flex-col gap-2'>
+                            <li><a href="#github" target='_blank'>GitHub</a></li>
+                            <li><a href="#twitter" target='_blank'>Twitter</a></li>
+                            <li><a href="#linkedin" target='_blank'>LinkedIn</a></li>
+                        </ul>  
                     </div>
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <h2 className='font-bold'>COMPANY</h2>
+                        <ul className='my-5 flex flex-col gap-2'>
+                            <li><a href="#about" target='_blank'>About</a></li>
+                            <li><a href="#contact" target='_blank'>Contact</a></li>
+                            <li><a href="#careers" target='_blank'>Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 className='font-bold'>LEGAL</h2>
+                        <ul className='my-5 flex flex-col gap-2'>
+                            <li><a href="#privacy" target='_blank'>Privacy Policy</a></li>
+                            <li><a href="#terms" target='_blank'>Terms of Service</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="flex justify-between items-center my-10">
                     <p className="text-gray-400">&copy; 2026 Dev Stack. All rights reserved.</p>
