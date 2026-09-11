@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             <div className="mx-[8%] my-10">
-                <div className='flex gap-10'>
+                <div className='flex flex-col md:flex-row justify-between gap-10'>
                     <div>
                         <img src={footerLogo} alt="Logo Dev Stack" />
                         <p className='my-5'>Curated tools, technologies, and resources for developers building modern software.</p>
@@ -38,7 +38,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="flex justify-between items-center my-10">
+                <div className="flex flex-col md:flex-row justify-between items-center my-10">
                     <p className="text-gray-400">&copy; 2026 Dev Stack. All rights reserved.</p>
                     <ul className="flex justify-between gap-5 text-gray-400">
                         <li><a href="#privacy" target="_blank">Privacy</a></li>
