@@ -1,7 +1,12 @@
 import React from 'react';
 import TechnologyCard from './TechnologyCard';
+import type { Itechnologies } from '../../type/technologiesType';
 
-const AvailableTechnologies = ({technologies}) => {
+interface TechnologyCardProps {
+  technologies: Itechnologies[];
+}
+
+const AvailableTechnologies = ({technologies}: TechnologyCardProps) => {
     return (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
   {technologies.map((technologies) => (
@@ -11,13 +16,7 @@ const AvailableTechnologies = ({technologies}) => {
     />
   ))}
 </div>
-        // <div>
-        //     {
-        //         technologies.map((technologies) => {
-        //             return <div>{technologies.name}</div>
-        //         })
-        //     }
-        // </div>
+      
     );
 };
 
