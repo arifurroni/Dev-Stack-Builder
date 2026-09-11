@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             <div className="max-w-7xl mx-auto px-5 lg:px-10 my-10">
-                <div className='flex flex-col md:flex-row justify-between gap-10'>
+                <div className='flex flex-col md:flex-row justify-between gap-5'>
                     <div>
                         <img src={footerLogo} alt="Logo Dev Stack" />
                         <p className='my-5'>Curated tools, technologies, and resources for developers building modern software.</p>
