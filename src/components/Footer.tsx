@@ -3,7 +3,7 @@ import footerLogo from '../assets/logo-text.png'
 const Footer = () => {
     return (
         <div>
-            <div className="mx-[8%] my-10">
+            <div className="max-w-7xl mx-auto px-5 lg:px-10 my-10">
                 <div className='flex flex-col md:flex-row justify-between gap-10'>
                     <div>
                         <img src={footerLogo} alt="Logo Dev Stack" />

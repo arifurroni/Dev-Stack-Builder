@@ -2,7 +2,7 @@ import bannerImg from '../assets/banner-stack.png'
 
 const Banner = () => {
     return (
-        <div className='flex flex-col md:flex-row justify-between items-center mx-[10%] my-10'>
+        <div className='flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-5 lg:px-10 my-10'>
             <div>
                 <h1 className='text-5xl font-bold'>Build Your Ideal <br /> <span className='bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent'>Development Stack</span></h1>
                 <p className='my-4'>Explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits your next project.</p>
