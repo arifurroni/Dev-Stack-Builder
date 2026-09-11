@@ -7,7 +7,7 @@ import { Suspense } from 'react'
 import type { Itechnologies } from './type/technologiesType'
 
 
-const technologiesFetch = async ():Promise<Itechnologies> => {
+const technologiesFetch = async ():Promise<Itechnologies[]> => {
   const res = await fetch('/data.json');
   const data = await res.json();
   return data;

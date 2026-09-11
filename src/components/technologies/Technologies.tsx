@@ -1,8 +1,14 @@
 import React, { use } from 'react';
+import type { Itechnologies } from '../../type/technologiesType';
 
-const Technologies = ({technologiesPromise}) => {
+interface TechnologiesProps {
+    technologiesPromise: Promise<Itechnologies[]>
+}
+
+const Technologies = ({technologiesPromise}:TechnologiesProps) => {
     console.log(technologiesPromise);
-    const technologies = use(technologiesPromise)
+    const technologies = use(technologiesPromise);
+    
 
     return (
         <div>
