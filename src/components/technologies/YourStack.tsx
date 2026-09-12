@@ -1,9 +1,21 @@
-// import React from 'react';
+import type { Dispatch, SetStateAction } from "react";
+import type { Itechnologies } from "../../type/technologiesType";
 
-const YourStack = () => {
+
+
+interface IyourStackProps {
+    yourStack: Itechnologies[];
+    setYourStack: Dispatch<SetStateAction<Itechnologies[]>>;
+}
+
+const YourStack = ({yourStack, setYourStack}: IyourStackProps) => {
+    
     return (
         <div>
             <h2>Your Stack</h2>
+         <div>
+          
+         </div>
         </div>
     );
 };

@@ -32,7 +32,7 @@ State: Managed inside a component. Can be changed. Used for data that changes ov
 
 ---
 
-⚙️ Technology
+# ⚙️ Technology
 - React.js
 - Tailwind CSS, DaisyUI
 - TypeScript / JavaScript (ES6+)
