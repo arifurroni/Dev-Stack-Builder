@@ -4,20 +4,6 @@ import { toast } from "react-toastify";
 
 
 
-const badgeStyles = {
-    Popular: "bg-blue-50 text-blue-500 border-blue-100",
-    Fast: "bg-orange-50 text-orange-500 border-orange-100",
-    Versatile: "bg-green-50 text-green-500 border-green-100",
-    Essential: "bg-purple-50 text-purple-500 border-purple-100",
-    Standard: "bg-green-50 text-green-500 border-green-100",
-    "Top SQL": "bg-sky-50 text-sky-500 border-sky-100",
-    Containers: "bg-indigo-50 text-indigo-500 border-indigo-100",
-    Modern: "bg-pink-50 text-pink-500 border-pink-100",
-    'Cloud Native': "bg-amber-50 text-amber-500 border-amber-100",
-    Easy: "bg-teal-50 text-teal-500 border-teal-100"
-};
-
-
 interface TechnologyCardProps {
   technology: Itechnologies;
   yourStack: Itechnologies[];
@@ -63,7 +49,7 @@ const TechnologyCard = ({ technology, yourStack, setYourStack }: TechnologyCardP
           />
         </div>
 
-        <span className={`${badgeStyles[badge] || "bg-gray-50 text-gray-500 border-gray-100"} rounded-full px-3 py-1 text-xs font-semibold`}>
+        <span className={`bg-blue-50 text-blue-500 border-blue-100 rounded-full px-3 py-1 text-xs font-semibold`}>
           {badge}
         </span>
       </div>
