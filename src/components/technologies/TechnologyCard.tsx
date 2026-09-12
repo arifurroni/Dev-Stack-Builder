@@ -14,7 +14,7 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
     const handleSelectTechnology = () => {
         setIsSelected(true)
         if (isSelected === false) {
-            toast(`${technology.name} is selected successfully`, {position: "bottom-right"})
+            toast(`${technology.name} is added successfully`, {position: "bottom-right"})
         }
     }
 
@@ -77,7 +77,7 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
       </div>
 
 
-        <button onClick={()=> handleSelectTechnology()} disabled={isSelected === true ? true : false} className="btn btn-primary w-full rounded-xl mt-5 py-1 shadow-md transition-all hover:scale-103">{isSelected === true ? "Selected" : "Add to Stack"}</button>
+        <button onClick={()=> handleSelectTechnology()} disabled={isSelected === true ? true : false} className="btn btn-primary w-full rounded-xl mt-5 py-1 shadow-md transition-all hover:scale-103">{isSelected === true ? "✓ Added to Stack" : "Add to Stack"}</button>
 
     </div>
   );
