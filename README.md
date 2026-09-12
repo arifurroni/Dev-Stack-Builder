@@ -28,3 +28,14 @@ State: Managed inside a component. Can be changed. Used for data that changes ov
 6. What is conditional rendering? Show one place you used it.
 
 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+
+
+
+⚙️ Technology
+- React.js
+- Tailwind CSS, DaisyUI
+- TypeScript / JavaScript (ES6+)
+- React-Toastify (NPM Package)
+- JSON (for technology data)
+- Vite (build tool)
