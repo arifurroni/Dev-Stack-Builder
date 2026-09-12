@@ -11,10 +11,11 @@ interface IyourStackProps {
 const YourStack = ({yourStack, setYourStack}: IyourStackProps) => {
     
     return (
-        <div>
-            <h2>Your Stack</h2>
-         <div>
-          
+        <div className="border rounded-lg p-3">
+            <h2 className="text-xl font-bold">Your Stack</h2>
+            <p className="text-sm">No technologies selected yet.</p>
+         <div className="border border-dashed rounded-lg p-3">
+            <p className="text-sm">Your stack is empty.</p>
          </div>
         </div>
     );
