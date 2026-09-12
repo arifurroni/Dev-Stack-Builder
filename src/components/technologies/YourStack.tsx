@@ -1,12 +1,4 @@
-// import type { Dispatch, SetStateAction } from "react";
-// import type { Itechnologies } from "../../type/technologiesType";
 
-
-
-// interface IyourStackProps {
-//     yourStack: Itechnologies[];
-//     setYourStack: Dispatch<SetStateAction<Itechnologies[]>>;
-// }
 
 const YourStack = () => {
     
