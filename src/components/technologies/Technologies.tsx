@@ -1,7 +1,7 @@
-import { use, useState } from 'react';
+import { use } from 'react';
 import type { Itechnologies } from '../../type/technologiesType';
 import AvailableTechnologies from './AvailableTechnologies';
-import YourStack from './YourStack';
+
 
 interface TechnologiesProps {
     technologiesPromise: Promise<Itechnologies[]>
@@ -10,8 +10,6 @@ interface TechnologiesProps {
 const Technologies = ({technologiesPromise}:TechnologiesProps) => {
     
     const technologies = use(technologiesPromise);
-
-    const [yourStack, setYourStack] = useState<Itechnologies[]>([])
     
 
     return (
@@ -21,13 +19,11 @@ const Technologies = ({technologiesPromise}:TechnologiesProps) => {
 
             <div className='flex flex-col md:flex-row justify-between gap-4'>
                 <div>
-                <AvailableTechnologies technologies = {technologies} yourStack={yourStack} setYourStack={setYourStack} />
+                <AvailableTechnologies technologies = {technologies} />
                 </div>
 
 
-                <div>
-                    <YourStack yourStack={yourStack} setYourStack={setYourStack} />
-                </div>
+                
 
 
             </div>

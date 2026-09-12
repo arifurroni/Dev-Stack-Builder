@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { useState } from "react";
 import type { Itechnologies } from "../../type/technologiesType";
 import { toast } from "react-toastify";
 
@@ -6,12 +6,10 @@ import { toast } from "react-toastify";
 
 interface TechnologyCardProps {
   technology: Itechnologies;
-  yourStack: Itechnologies[];
-  setYourStack: Dispatch<SetStateAction<Itechnologies[]>>;
 }
 
 
-const TechnologyCard = ({ technology, yourStack, setYourStack }: TechnologyCardProps) => {
+const TechnologyCard = ({ technology }: TechnologyCardProps) => {
 
     const [isSelected, setIsSelected] = useState(false)
 
@@ -22,9 +20,6 @@ const TechnologyCard = ({ technology, yourStack, setYourStack }: TechnologyCardP
         } else {
             toast(`Already added`);
         }
-
-        // Your Stack Logic
-        setYourStack([...yourStack, technology]);
     }
 
   const {
