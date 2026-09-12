@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Itechnologies } from "../../type/technologiesType";
 
 
@@ -6,6 +7,8 @@ interface TechnologyCardProps {
 }
 
 const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+    const [isSelected, setIsSelected] = useState(false)
+    console.log(isSelected, setIsSelected, "isSelected, setIsSelected");
   const {
     name,
     category,
@@ -63,9 +66,10 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
           {difficulty}
         </span>
       </div>
-      <div className="flex justify-center items-center mt-5 bg-black py-2 rounded-lg">
-        <button className="bg-black text-white">Add to Stack</button>
-      </div>
+
+
+        <button onClick={()=> setIsSelected(true)} className="bg-black w-full rounded-lg mt-5 py-1 text-white">{isSelected === true ? "Selected" : "Add to Stack"}</button>
+
     </div>
   );
 };
