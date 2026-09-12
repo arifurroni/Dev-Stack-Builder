@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Itechnologies } from "../../type/technologiesType";
+import { toast } from "react-toastify";
 
 
 interface TechnologyCardProps {
@@ -13,7 +14,7 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
     const handleSelectTechnology = () => {
         setIsSelected(true)
         if (isSelected === false) {
-            alert(`${technology.name} is selected successfully`)
+            toast(`${technology.name} is selected successfully`, {position: "bottom-right"})
         }
     }
 
