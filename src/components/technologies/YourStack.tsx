@@ -1,14 +1,14 @@
-import type { Dispatch, SetStateAction } from "react";
-import type { Itechnologies } from "../../type/technologiesType";
+// import type { Dispatch, SetStateAction } from "react";
+// import type { Itechnologies } from "../../type/technologiesType";
 
 
 
-interface IyourStackProps {
-    yourStack: Itechnologies[];
-    setYourStack: Dispatch<SetStateAction<Itechnologies[]>>;
-}
+// interface IyourStackProps {
+//     yourStack: Itechnologies[];
+//     setYourStack: Dispatch<SetStateAction<Itechnologies[]>>;
+// }
 
-const YourStack = ({yourStack, setYourStack}: IyourStackProps) => {
+const YourStack = () => {
     
     return (
         <div className="border rounded-lg p-3">
@@ -17,6 +17,8 @@ const YourStack = ({yourStack, setYourStack}: IyourStackProps) => {
          <div className="border border-dashed rounded-lg p-3">
             <p className="text-sm">Your stack is empty.</p>
          </div>
+
+        
         </div>
     );
 };
