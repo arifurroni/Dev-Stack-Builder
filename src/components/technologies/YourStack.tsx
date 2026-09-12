@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 
 const YourStack = () => {
     return (
         <div>
-            Your Stack
+            <h2>Your Stack</h2>
         </div>
     );
 };

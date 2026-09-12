@@ -7,8 +7,16 @@ interface TechnologyCardProps {
 }
 
 const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+
     const [isSelected, setIsSelected] = useState(false)
-    console.log(isSelected, setIsSelected, "isSelected, setIsSelected");
+
+    const handleSelectTechnology = () => {
+        setIsSelected(true)
+        if (isSelected === false) {
+            alert(`${technology.name} is selected successfully`)
+        }
+    }
+
   const {
     name,
     category,
@@ -68,7 +76,7 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
       </div>
 
 
-        <button onClick={()=> setIsSelected(true)} className="bg-black w-full rounded-lg mt-5 py-1 text-white">{isSelected === true ? "Selected" : "Add to Stack"}</button>
+        <button onClick={()=> handleSelectTechnology()} disabled={isSelected === true ? true : false} className="btn btn-primary w-full rounded-xl mt-5 py-1 shadow-md transition-all hover:scale-103">{isSelected === true ? "Selected" : "Add to Stack"}</button>
 
     </div>
   );
