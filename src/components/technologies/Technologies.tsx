@@ -1,15 +1,20 @@
-import { use } from 'react';
+import { use, useState, type Dispatch, type SetStateAction } from 'react';
 import type { Itechnologies } from '../../type/technologiesType';
 import AvailableTechnologies from './AvailableTechnologies';
+import YourStack from './YourStack';
 
 
 interface TechnologiesProps {
     technologiesPromise: Promise<Itechnologies[]>
+    yourStack: Itechnologies[];
+    setYourStack: Dispatch<SetStateAction<Itechnologies[]>>
 }
 
 const Technologies = ({technologiesPromise}:TechnologiesProps) => {
     
     const technologies = use(technologiesPromise);
+
+    const [yourStack, setYourStack] = useState<Itechnologies[]>([])
     
 
     return (
@@ -19,11 +24,11 @@ const Technologies = ({technologiesPromise}:TechnologiesProps) => {
 
             <div className='flex flex-col md:flex-row justify-between gap-4'>
                 <div>
-                <AvailableTechnologies technologies = {technologies} />
+                <AvailableTechnologies technologies = {technologies} yourStack={yourStack} setYourStack={setYourStack} />
                 </div>
 
 
-                
+                <YourStack yourStack={yourStack} setYourStack={setYourStack} />
 
 
             </div>

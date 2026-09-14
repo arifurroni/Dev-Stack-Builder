@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import type { Itechnologies } from "../../type/technologiesType";
 import { toast } from "react-toastify";
 
@@ -6,10 +6,12 @@ import { toast } from "react-toastify";
 
 interface TechnologyCardProps {
   technology: Itechnologies;
+  yourStack: Itechnologies[];
+  setYourStack: Dispatch<SetStateAction<Itechnologies[]>>
 }
 
 
-const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+const TechnologyCard = ({ technology, yourStack, setYourStack }: TechnologyCardProps) => {
 
     const [isSelected, setIsSelected] = useState(false)
 
@@ -20,6 +22,9 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
         } else {
             toast(`Already added`);
         }
+
+        // Your Stack Logic
+        setYourStack([...yourStack, technology])
     }
 
   const {
@@ -33,9 +38,9 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
   } = technology;
 
   return (
-    <div className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       {/* Header */}
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-start justify-between gap-2">
         <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gray-50 p-3">
           <img
             src={icon}
