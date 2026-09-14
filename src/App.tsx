@@ -3,7 +3,7 @@ import Nav from './components/Nav'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
 import Technologies from './components/technologies/Technologies'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import type { Itechnologies } from './type/technologiesType'
 
 
@@ -16,12 +16,15 @@ const technologiesFetch = async ():Promise<Itechnologies[]> => {
 function App() {
   const technologiesPromise = technologiesFetch();
 
+  const [yourStack, setYourStack] = useState<Itechnologies[]>([]);
+
   return (
     <>
         <Nav />
         <Banner />
         <Suspense fallback={<h2 className='mx-10'>Loading, please wait...</h2>}>
-        <Technologies technologiesPromise={technologiesPromise} />
+        <Technologies technologiesPromise={technologiesPromise} yourStack={yourStack}
+        setYourStack={setYourStack} />
         </Suspense>
         <Footer />
       
